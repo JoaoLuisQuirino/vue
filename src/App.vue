@@ -8,15 +8,14 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'app',
   data: {
-    showPage: true,
+    showPage: false,
   },
   components: {
-    HelloWorld
+    HelloWorld: () => import('./components/HelloWorld.vue')
   }
 }
 </script>
