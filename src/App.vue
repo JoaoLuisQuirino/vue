@@ -1,8 +1,9 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    JOAOs2
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div v-if="showPage">
+      <img alt="Vue logo" src="./assets/logo.png">
+      <HelloWorld msg="Welcome to Your Vue.js App"/>
+    </div>
   </div>
 </template>
 
@@ -11,6 +12,9 @@ import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'app',
+  data: {
+    showPage: true,
+  },
   components: {
     HelloWorld
   }
