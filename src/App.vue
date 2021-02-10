@@ -5,7 +5,7 @@
       <img alt="Vue logo" src="./assets/logo.png">
       <HelloWorld msg="Welcome to Your Vue.js App"/>
     </div>
-    <div v-else>
+    <div v-else @click="toogleShowPage">
       joao
     </div>
   </div>
@@ -20,9 +20,13 @@ export default {
       showPage: false,
     }
   },
-
   components: {
     HelloWorld: () => import('./components/HelloWorld.vue')
+  },
+  methods:{
+    toogleShowPage(){
+      this.showPage = !showPage;
+    }
   }
 }
 </script>
