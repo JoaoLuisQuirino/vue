@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+
     <div v-if="showPage">
       <img alt="Vue logo" src="./assets/logo.png">
       <HelloWorld msg="Welcome to Your Vue.js App"/>
@@ -11,9 +12,12 @@
 
 export default {
   name: 'app',
-  data: {
-    showPage: false,
+  data: () => {
+    return {
+      showPage: false,
+    }
   },
+
   components: {
     HelloWorld: () => import('./components/HelloWorld.vue')
   }
